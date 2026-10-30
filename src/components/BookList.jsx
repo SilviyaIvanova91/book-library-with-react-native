@@ -7,7 +7,8 @@ export default function BookList() {
   return (
     <ScrollView contentContainerStyle={styles.content}>
       <View style={styles.header}>
-        <Text style={styles.title}>Каталог Книги</Text>
+        <Text style={styles.title}>Открий следващата си книга</Text>
+        <Text style={styles.subtitle}>Любими истории, нови светове.</Text>
         <Text style={styles.subtitle}>{books.length} книги</Text>
       </View>
 
