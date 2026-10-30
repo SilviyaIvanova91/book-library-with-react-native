@@ -1,0 +1,229 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Harry Potter and the Philosopher's Stone",
+      "year": 1997,
+      "author": "J. K. Rowling",
+      "genre": "Fantasy",
+      "pageCount": 223,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780747532699-L.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Harry Potter and the Chamber of Secrets",
+      "year": 1998,
+      "author": "J. K. Rowling",
+      "genre": "Fantasy",
+      "pageCount": 251,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780747538493-L.jpg"
+    },
+    {
+      "id": 3,
+      "title": "The Hobbit",
+      "year": 1937,
+      "author": "J. R. R. Tolkien",
+      "genre": "Fantasy, Adventure",
+      "pageCount": 310,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780547928227-L.jpg"
+    },
+    {
+      "id": 4,
+      "title": "The Lord of the Rings",
+      "year": 1954,
+      "author": "J. R. R. Tolkien",
+      "genre": "Fantasy, Adventure",
+      "pageCount": 1178,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780618640157-L.jpg"
+    },
+    {
+      "id": 5,
+      "title": "1984",
+      "year": 1949,
+      "author": "George Orwell",
+      "genre": "Dystopian, Science Fiction",
+      "pageCount": 328,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Animal Farm",
+      "year": 1945,
+      "author": "George Orwell",
+      "genre": "Political Satire, Allegory",
+      "pageCount": 112,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780451526342-L.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Pride and Prejudice",
+      "year": 1813,
+      "author": "Jane Austen",
+      "genre": "Romance, Classic",
+      "pageCount": 432,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg"
+    },
+    {
+      "id": 8,
+      "title": "To Kill a Mockingbird",
+      "year": 1960,
+      "author": "Harper Lee",
+      "genre": "Classic, Drama",
+      "pageCount": 336,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780061120084-L.jpg"
+    },
+    {
+      "id": 9,
+      "title": "The Great Gatsby",
+      "year": 1925,
+      "author": "F. Scott Fitzgerald",
+      "genre": "Classic, Tragedy",
+      "pageCount": 180,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg"
+    },
+    {
+      "id": 10,
+      "title": "The Catcher in the Rye",
+      "year": 1951,
+      "author": "J. D. Salinger",
+      "genre": "Classic, Coming-of-Age",
+      "pageCount": 277,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780316769488-L.jpg"
+    },
+    {
+      "id": 11,
+      "title": "The Little Prince",
+      "year": 1943,
+      "author": "Antoine de Saint-Exupéry",
+      "genre": "Fantasy, Novella",
+      "pageCount": 96,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780156012195-L.jpg"
+    },
+    {
+      "id": 12,
+      "title": "The Alchemist",
+      "year": 1988,
+      "author": "Paulo Coelho",
+      "genre": "Adventure, Philosophical Fiction",
+      "pageCount": 208,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780061122415-L.jpg"
+    },
+    {
+      "id": 13,
+      "title": "The Da Vinci Code",
+      "year": 2003,
+      "author": "Dan Brown",
+      "genre": "Mystery, Thriller",
+      "pageCount": 489,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780307474278-L.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Murder on the Orient Express",
+      "year": 1934,
+      "author": "Agatha Christie",
+      "genre": "Mystery, Crime",
+      "pageCount": 256,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780062693662-L.jpg"
+    },
+    {
+      "id": 15,
+      "title": "The Shining",
+      "year": 1977,
+      "author": "Stephen King",
+      "genre": "Horror, Thriller",
+      "pageCount": 447,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780307743657-L.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Dune",
+      "year": 1965,
+      "author": "Frank Herbert",
+      "genre": "Science Fiction",
+      "pageCount": 688,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780441172719-L.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Fahrenheit 451",
+      "year": 1953,
+      "author": "Ray Bradbury",
+      "genre": "Dystopian, Science Fiction",
+      "pageCount": 249,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9781451673319-L.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Brave New World",
+      "year": 1932,
+      "author": "Aldous Huxley",
+      "genre": "Dystopian, Science Fiction",
+      "pageCount": 311,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780060850524-L.jpg"
+    },
+    {
+      "id": 19,
+      "title": "The Hunger Games",
+      "year": 2008,
+      "author": "Suzanne Collins",
+      "genre": "Dystopian, Adventure",
+      "pageCount": 374,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780439023481-L.jpg"
+    },
+    {
+      "id": 20,
+      "title": "The Book Thief",
+      "year": 2005,
+      "author": "Markus Zusak",
+      "genre": "Historical Fiction, Drama",
+      "pageCount": 552,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780375842207-L.jpg"
+    },
+    {
+      "id": 21,
+      "title": "The Kite Runner",
+      "year": 2003,
+      "author": "Khaled Hosseini",
+      "genre": "Drama, Historical Fiction",
+      "pageCount": 371,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9781594631931-L.jpg"
+    },
+    {
+      "id": 22,
+      "title": "The Girl with the Dragon Tattoo",
+      "year": 2005,
+      "author": "Stieg Larsson",
+      "genre": "Crime, Thriller",
+      "pageCount": 465,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780307454546-L.jpg"
+    },
+    {
+      "id": 23,
+      "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+      "year": 1950,
+      "author": "C. S. Lewis",
+      "genre": "Fantasy, Children's Fiction",
+      "pageCount": 208,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780064471046-L.jpg"
+    },
+    {
+      "id": 24,
+      "title": "The Fault in Our Stars",
+      "year": 2012,
+      "author": "John Green",
+      "genre": "Young Adult, Romance, Drama",
+      "pageCount": 313,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780525478812-L.jpg"
+    },
+    {
+      "id": 25,
+      "title": "The Martian",
+      "year": 2011,
+      "author": "Andy Weir",
+      "genre": "Science Fiction, Adventure",
+      "pageCount": 369,
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780553418026-L.jpg"
+    }
+  ]
+}
