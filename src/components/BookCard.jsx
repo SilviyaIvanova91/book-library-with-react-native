@@ -9,9 +9,10 @@ export default function BookCard({
   genre,
   pageCount,
   coverUrl,
+  onSelect,
 }) {
   return (
-    <View style={styles.card}>
+    <Pressable style={styles.card} onPress={onSelect}>
       <Image source={{ uri: coverUrl }} style={styles.cover} />
 
       <View style={styles.info}>
@@ -27,7 +28,7 @@ export default function BookCard({
 
         <GenreTags genre={genre} />
       </View>
-    </View>
+    </Pressable>
   );
 }
 

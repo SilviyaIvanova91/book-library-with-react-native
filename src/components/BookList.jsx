@@ -1,9 +1,9 @@
 import { Text, View, StyleSheet, ScrollView, Pressable } from "react-native";
 import { colors } from "../theme";
-import { books } from "../../books.json";
+
 import BookCard from "./BookCard";
 
-export default function BookList() {
+export default function BookList({ books, onSelect }) {
   return (
     <ScrollView contentContainerStyle={styles.content}>
       <View style={styles.header}>
@@ -13,7 +13,13 @@ export default function BookList() {
       </View>
 
       {books.map((book) => (
-        <BookCard key={book.id} {...book} />
+        <BookCard
+          key={book.id}
+          {...book}
+          onSelect={() => {
+            onSelect(book);
+          }}
+        />
       ))}
     </ScrollView>
   );
