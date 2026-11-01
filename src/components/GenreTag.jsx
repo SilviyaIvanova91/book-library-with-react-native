@@ -8,9 +8,11 @@ export default function GenreTags({ genre }) {
   return (
     <View style={styles.row}>
       {genres.map((name, index) => (
-        <View style={styles.tag}>
-          <Text style={styles.text}>{name}</Text>
-        </View>
+        <Pressable style={styles.text} key={index}>
+          <View style={styles.tag}>
+            <Text style={styles.text}>{name}</Text>
+          </View>
+        </Pressable>
       ))}
     </View>
   );

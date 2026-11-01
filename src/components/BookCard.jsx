@@ -20,8 +20,10 @@ export default function BookCard({
         </View>
         <Text style={styles.author}>{author}</Text>
 
-        <Text style={styles.meta}>{year}г.</Text>
-        <Text style={styles.meta}>{pageCount} страници</Text>
+        <Text style={styles.meta}>
+          {year}г. • {pageCount} страници{" "}
+        </Text>
+        {/* <Text style={styles.meta}>{pageCount} страници</Text> */}
 
         <GenreTags genre={genre} />
       </View>
