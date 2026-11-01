@@ -8,6 +8,8 @@ import {
 } from "react-native";
 import { colors } from "../theme";
 
+import GenreTags from "./GenreTag";
+
 export default function BookDetails({ book, onBack }) {
   return (
     <ScrollView contentContainerStyle={styles.content}>
@@ -23,7 +25,6 @@ export default function BookDetails({ book, onBack }) {
         <Text style={styles.title}>{book.title}</Text>
 
         <View style={[styles.row, styles.rowDivider]}>
-          <Text style={styles.author}>Author</Text>
           <Text style={styles.author}>{book.author}</Text>
         </View>
 
@@ -35,8 +36,8 @@ export default function BookDetails({ book, onBack }) {
           <Text style={styles.meta}>{book.pageCount} pages</Text>
         </View>
 
-        <View style={styles.row}>
-          <Text style={styles.genres}>Genre: {book.genre}</Text>
+        <View style={[styles.row, styles.rowDivider]}>
+          <GenreTags genre={book.genre} />
         </View>
       </View>
     </ScrollView>
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
   },
   genres: {
     marginTop: 16,
-    marginBottom: 28,
+    marginBottom: 38,
     alignSelf: "stretch",
   },
   infoBox: {
@@ -103,5 +104,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.card,
     borderRadius: 16,
     paddingHorizontal: 16,
+    paddingBottom: 15,
+    paddingTop: 10,
   },
 });

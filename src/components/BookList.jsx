@@ -1,9 +1,13 @@
 import { Text, View, StyleSheet, ScrollView, Pressable } from "react-native";
 import { colors } from "../theme";
+import { useContext } from "react";
 
 import BookCard from "./BookCard";
+import { BookContext } from "../context/BookContext";
 
-export default function BookList({ books, onSelect }) {
+export default function BookList({ onSelect }) {
+  const { books, selectedGenre, setSelectedGenre } = useContext(BookContext);
+
   return (
     <ScrollView contentContainerStyle={styles.content}>
       <View style={styles.header}>
@@ -11,6 +15,18 @@ export default function BookList({ books, onSelect }) {
         <Text style={styles.subtitle}>Любими истории, нови светове.</Text>
         <Text style={styles.subtitle}>{books.length} книги</Text>
       </View>
+
+      {selectedGenre && (
+        <View style={styles.genreFilter}>
+          <Text style={styles.genreFilterLabel}>Филтриран по жанр:</Text>
+          <Pressable
+            style={styles.genreChip}
+            onPress={() => setSelectedGenre(null)}
+          >
+            <Text style={styles.genreChipText}>{selectedGenre} X</Text>
+          </Pressable>
+        </View>
+      )}
 
       {books.map((book) => (
         <BookCard

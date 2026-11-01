@@ -1,3 +1,15 @@
+import { StyleSheet, View, Text } from "react-native";
+import { colors } from "../theme";
+
+export default function BookGenresDetails({ label, value }) {
+  return (
+    <View style={styles.row}>
+      <Text style={styles.label}>{label}</Text>
+      <Text style={styles.value}>{value}</Text>
+    </View>
+  );
+}
+
 const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
