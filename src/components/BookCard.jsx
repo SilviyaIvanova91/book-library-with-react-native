@@ -1,12 +1,12 @@
 import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 import { colors } from "../theme";
-import GenreTags from "./GenreTag";
+import CategoryScreen from "../screens/CategoryScreen";
 
 export default function BookCard({
   title,
   year,
   author,
-  genre,
+  category,
   pageCount,
   coverUrl,
   onSelect,
@@ -26,7 +26,7 @@ export default function BookCard({
         </Text>
         {/* <Text style={styles.meta}>{pageCount} страници</Text> */}
 
-        <GenreTags genre={genre} />
+        {/* <CategoryScreen category={category} /> */}
       </View>
     </Pressable>
   );
