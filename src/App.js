@@ -1,11 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
-import { colors } from "./theme";
-import BookList from "./components/BookList";
+import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar } from "react-native";
+import RootNavigator from "./navigation/RootNavigator";
 
 export default function App() {
   return (
-    <View style={{ backgroundColor: colors.background, flex: 1 }}>
-      <BookList />
-    </View>
+    <>
+      <StatusBar barStyle="dark-content" backgroundColor="#FBF7F1" />
+      <NavigationContainer>
+        <RootNavigator />
+      </NavigationContainer>
+    </>
   );
 }
