@@ -6,9 +6,6 @@ import BookCard from "../components/BookCard";
 import { books } from "../data/books";
 
 export default function HomeScreen({ navigation }) {
-  // const { books, selectedCategory, setSelectedCategory } =
-  //   useContext(BookContext);
-
   return (
     <ScrollView contentContainerStyle={styles.content}>
       <View style={styles.header}>
@@ -16,18 +13,6 @@ export default function HomeScreen({ navigation }) {
         <Text style={styles.subtitle}>Любими истории, нови светове.</Text>
         <Text style={styles.subtitle}>{books.length} книги</Text>
       </View>
-
-      {/* {selectedCategory && (
-        <View style={styles.categoryFilter}>
-          <Text style={styles.categoryFilterLabel}>Филтриран по жанр:</Text>
-          <Pressable
-            style={styles.categoryChip}
-            onPress={() => setSelectedCategory(null)}
-          >
-            <Text style={styles.categoryChipText}>{selectedCategory} X</Text>
-          </Pressable>
-        </View>
-      )} */}
 
       {books.map((book) => (
         <BookCard

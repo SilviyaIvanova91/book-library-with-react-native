@@ -1,9 +1,8 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import HomeScreen from "../screens/HomeScreen";
-import CategoryScreen from "../screens/CategoryScreen";
-import CatalogScreen from "../screens/CatalogScreen";
 import CartScreen from "../screens/CartScreen";
+import CatalogNavigator from "./CatalogNavigator";
 
 export default function TabNavigator() {
   const Tab = createBottomTabNavigator();
@@ -34,7 +33,7 @@ export default function TabNavigator() {
       />
       <Tab.Screen
         name="Books"
-        component={CatalogScreen}
+        component={CatalogNavigator}
         options={{
           headerShown: false,
           tabBarIcon: ({ color, size }) => (

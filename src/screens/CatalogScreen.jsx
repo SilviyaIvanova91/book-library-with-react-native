@@ -1,9 +1,14 @@
 import { Text, View, StyleSheet, ScrollView, Pressable } from "react-native";
 import { colors } from "../theme";
 import BookCard from "../components/BookCard";
-import { books } from "../data/books";
+
+import { useContext } from "react";
+import { BookContext } from "../context/BookContext";
 
 export default function CatalogScreen({ navigation }) {
+  const { books, selectedCategory, setSelectedCategory } =
+    useContext(BookContext);
+
   return (
     <ScrollView
       style={styles.container}
@@ -17,6 +22,18 @@ export default function CatalogScreen({ navigation }) {
           Намери следващото си любимо приключение.
         </Text>
       </View>
+
+      {selectedCategory && (
+        <View style={styles.categoryFilter}>
+          <Text style={styles.categoryFilterLabel}>Филтриран по жанр:</Text>
+          <Pressable
+            style={styles.categoryChip}
+            onPress={() => setSelectedCategory(null)}
+          >
+            <Text style={styles.categoryChipText}>{selectedCategory} X</Text>
+          </Pressable>
+        </View>
+      )}
 
       {books.map((book) => (
         <BookCard
@@ -35,11 +52,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.background,
+    paddingTop: 10,
   },
 
   content: {
     paddingHorizontal: 18,
-    paddingTop: 28,
+    paddingTop: 30,
     paddingBottom: 40,
   },
 
@@ -105,40 +123,185 @@ const styles = StyleSheet.create({
     fontWeight: "800",
   },
 
-  genreScroll: {
-    marginTop: 14,
-    marginBottom: 28,
-    marginHorizontal: -18,
-  },
-
-  genreContainer: {
-    paddingHorizontal: 18,
-    gap: 9,
-  },
-
-  genreChip: {
-    paddingHorizontal: 17,
-    paddingVertical: 10,
-    borderRadius: 22,
+  categoryFilter: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     backgroundColor: colors.card,
     borderWidth: 1,
     borderColor: colors.border,
+    borderLeftWidth: 3,
+    borderLeftColor: colors.accent,
+    borderRadius: 16,
+    paddingHorizontal: 14,
+    paddingVertical: 13,
+    marginBottom: 22,
+
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.12,
+    shadowRadius: 8,
+    elevation: 3,
   },
 
-  genreChipActive: {
-    backgroundColor: colors.accent,
-    borderColor: colors.accent,
+  filterInfo: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 11,
   },
 
-  genreText: {
-    color: colors.textMuted,
-    fontSize: 13,
-    fontWeight: "600",
+  filterIcon: {
+    width: 38,
+    height: 38,
+    borderRadius: 12,
+    backgroundColor: colors.background,
+    alignItems: "center",
+    justifyContent: "center",
   },
 
-  genreTextActive: {
-    color: colors.background,
+  filterIconText: {
+    color: colors.accent,
+    fontSize: 22,
+    fontWeight: "bold",
+  },
+
+  categoryFilterLabel: {
+    color: colors.accent,
+    fontSize: 10,
     fontWeight: "800",
+    letterSpacing: 1.4,
+    marginBottom: 3,
+  },
+
+  filterDescription: {
+    color: colors.textMuted,
+    fontSize: 12,
+  },
+
+  categoryChip: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 7,
+    backgroundColor: colors.accent + "20",
+    borderWidth: 1,
+    borderColor: colors.accent + "55",
+    borderRadius: 20,
+    paddingLeft: 12,
+    paddingRight: 5,
+    paddingVertical: 5,
+  },
+
+  categoryChipText: {
+    color: colors.accent,
+    fontSize: 12,
+    fontWeight: "800",
+  },
+
+  clearFilterButton: {
+    width: 25,
+    height: 25,
+    borderRadius: 13,
+    backgroundColor: colors.accent,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  clearFilterText: {
+    color: colors.background,
+    fontSize: 19,
+    fontWeight: "bold",
+    lineHeight: 22,
+  },
+
+  categoryFilter: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: colors.card,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderLeftWidth: 3,
+    borderLeftColor: colors.accent,
+    borderRadius: 16,
+    paddingHorizontal: 14,
+    paddingVertical: 13,
+    marginBottom: 22,
+
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.12,
+    shadowRadius: 8,
+    elevation: 3,
+  },
+
+  filterInfo: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 11,
+  },
+
+  filterIcon: {
+    width: 38,
+    height: 38,
+    borderRadius: 12,
+    backgroundColor: colors.background,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  filterIconText: {
+    color: colors.accent,
+    fontSize: 22,
+    fontWeight: "bold",
+  },
+
+  categoryFilterLabel: {
+    color: colors.accent,
+    fontSize: 10,
+    fontWeight: "800",
+    letterSpacing: 1.4,
+    marginBottom: 3,
+  },
+
+  filterDescription: {
+    color: colors.textMuted,
+    fontSize: 12,
+  },
+
+  categoryChip: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 7,
+    backgroundColor: colors.accent + "20",
+    borderWidth: 1,
+    borderColor: colors.accent + "55",
+    borderRadius: 20,
+    paddingLeft: 12,
+    paddingRight: 5,
+    paddingVertical: 5,
+  },
+
+  categoryChipText: {
+    color: colors.accent,
+    fontSize: 12,
+    fontWeight: "800",
+    marginHorizontal: 10,
+  },
+
+  clearFilterButton: {
+    width: 25,
+    height: 25,
+    borderRadius: 13,
+    backgroundColor: colors.accent,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  clearFilterText: {
+    color: colors.background,
+    fontSize: 19,
+    fontWeight: "bold",
+    lineHeight: 22,
   },
 
   sortHeader: {

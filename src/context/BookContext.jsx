@@ -6,13 +6,9 @@ export const BookContext = createContext();
 export const BookProvider = ({ children }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  const filteredBooks = {
-    books: selectedCategory
-      ? books.filter((b) => b.category.includes(selectedCategory))
-      : books,
-    selectedCategory,
-    setSelectedCategory,
-  };
+  const filteredBooks = selectedCategory
+    ? books.filter((b) => b.category.includes(selectedCategory))
+    : books;
 
   const values = {
     books: filteredBooks,

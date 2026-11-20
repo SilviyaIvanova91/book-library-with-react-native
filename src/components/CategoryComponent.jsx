@@ -4,7 +4,7 @@ import { colors } from "../theme";
 import { useContext } from "react";
 import { BookContext } from "../context/BookContext";
 
-export default function CategoryScreen({ category }) {
+export default function CategoryComponent({ category }) {
   const { selectedCategory, setSelectedCategory } = useContext(BookContext);
   const categories = category.split(",").map((c) => c.trim());
 

@@ -1,6 +1,6 @@
 import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 import { colors } from "../theme";
-import CategoryScreen from "../screens/CategoryScreen";
+import CategoryComponent from "./CategoryComponent";
 
 export default function BookCard({
   title,
@@ -26,7 +26,7 @@ export default function BookCard({
         </Text>
         {/* <Text style={styles.meta}>{pageCount} страници</Text> */}
 
-        {/* <CategoryScreen category={category} /> */}
+        <CategoryComponent category={category} />
       </View>
     </Pressable>
   );
