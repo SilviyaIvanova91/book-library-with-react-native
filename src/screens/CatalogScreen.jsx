@@ -40,7 +40,9 @@ export default function CatalogScreen({ navigation }) {
           key={book.id}
           {...book}
           onSelect={() => {
-            navigation.navigate();
+            navigation.navigate("BookDetailsScreen", {
+              bookId: book.id,
+            });
           }}
         />
       ))}
