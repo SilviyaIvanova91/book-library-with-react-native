@@ -6,7 +6,10 @@ import { BookContext } from "../context/BookContext";
 
 export default function CategoryComponent({ category }) {
   const { selectedCategory, setSelectedCategory } = useContext(BookContext);
-  const categories = category.split(",").map((c) => c.trim());
+  const categories = (category || "")
+    .split(",")
+    .map((c) => c.trim())
+    .filter(Boolean);
 
   const pressHandler = (name) => {
     setSelectedCategory(name === selectedCategory ? null : name);

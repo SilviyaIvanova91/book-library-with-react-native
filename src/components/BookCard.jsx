@@ -1,6 +1,15 @@
-import { Text, View, StyleSheet, Image, Pressable } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  Pressable,
+  FlatList,
+} from "react-native";
 import { colors } from "../theme";
 import CategoryComponent from "./CategoryComponent";
+import { useContext } from "react";
+import { BookContext } from "../context/BookContext";
 
 export default function BookCard({
   title,
