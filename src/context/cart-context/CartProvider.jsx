@@ -57,6 +57,10 @@ export default function CartProvider({ children }) {
     );
   };
 
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   const totalOrderPrice = useMemo(
     () =>
       cartItems.reduce(
@@ -77,6 +81,7 @@ export default function CartProvider({ children }) {
     removeFromCart,
     incrementQty,
     decrementQty,
+    clearCart,
     totalOrderPrice,
     totalItems,
   };

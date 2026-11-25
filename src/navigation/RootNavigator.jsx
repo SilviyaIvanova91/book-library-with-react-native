@@ -3,6 +3,7 @@ import TabNavigator from "./TabNavigator";
 import BookDetailsScreen from "../screens/BookDetailsScreen";
 import CatalogScreen from "../screens/CatalogScreen";
 import CartScreen from "../screens/CartScreen";
+import CheckoutScreen from "../screens/CheckoutScreen";
 
 export default function RootNavigator() {
   const Stack = createNativeStackNavigator();
@@ -28,6 +29,11 @@ export default function RootNavigator() {
         name="CartMain"
         component={CartScreen}
         options={{ title: "Cart" }}
+      />
+      <Stack.Screen
+        name="Checkout"
+        component={CheckoutScreen}
+        options={{ title: "Checkout" }}
       />
     </Stack.Navigator>
   );

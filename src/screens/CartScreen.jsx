@@ -6,7 +6,7 @@ import Button from "../components/Button";
 import { colors } from "../theme";
 import { useCart } from "../context/cart-context/useCart";
 
-export default function CartScreen() {
+export default function CartScreen({ navigation }) {
   const {
     cartItems,
     removeFromCart,
@@ -79,7 +79,7 @@ export default function CartScreen() {
 
         <Button
           title="Proceed to Checkout"
-          onPress={() => {}}
+          onPress={() => navigation.navigate("Checkout")}
           style={styles.checkoutButton}
         />
       </View>
