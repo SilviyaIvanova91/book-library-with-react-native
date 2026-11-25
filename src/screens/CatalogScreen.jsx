@@ -2,12 +2,27 @@ import { Text, View, StyleSheet, ScrollView, Pressable } from "react-native";
 import { colors } from "../theme";
 import BookCard from "../components/BookCard";
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { BookContext } from "../context/BookContext";
 
-export default function CatalogScreen({ navigation }) {
+export default function CatalogScreen({ navigation, route }) {
   const { books, selectedCategory, setSelectedCategory } =
     useContext(BookContext);
+  const searchQuery = route.params?.searchQuery || "";
+
+  const filteredBooks = books.filter((book) => {
+    const query = searchQuery.toLowerCase().trim();
+
+    const matchesSearch =
+      (book.title || "").toLowerCase().includes(query) ||
+      (book.author || "").toLowerCase().includes(query) ||
+      (book.category || "").toLowerCase().includes(query);
+
+    const matchesCategory =
+      !selectedCategory || book.category === selectedCategory;
+
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <ScrollView
@@ -15,13 +30,15 @@ export default function CatalogScreen({ navigation }) {
       contentContainerStyle={styles.content}
       showsVerticalScrollIndicator={false}
     >
-      <View style={styles.header}>
-        <Text style={styles.eyebrow}>YOUR READING SPACE ✨</Text>
-        <Text style={styles.title}>Каталог</Text>
-        <Text style={styles.subtitle}>
-          Намери следващото си любимо приключение.
-        </Text>
-      </View>
+      {!searchQuery && (
+        <View style={styles.header}>
+          <Text style={styles.eyebrow}>YOUR READING SPACE ✨</Text>
+          <Text style={styles.title}>Каталог</Text>
+          <Text style={styles.subtitle}>
+            Намери следващото си любимо приключение.
+          </Text>
+        </View>
+      )}
 
       {selectedCategory && (
         <View style={styles.categoryFilter}>
@@ -35,13 +52,14 @@ export default function CatalogScreen({ navigation }) {
         </View>
       )}
 
-      {books.map((book) => (
+      {filteredBooks.map((book) => (
         <BookCard
           key={book.id}
+          navigation={navigation}
           {...book}
           onSelect={() => {
-            navigation.navigate("BookDetailsScreen", {
-              bookId: book.id,
+            navigation.navigate("BookDetails", {
+              book: book,
             });
           }}
         />

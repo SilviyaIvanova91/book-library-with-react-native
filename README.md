@@ -7,3 +7,5 @@ Instalation
 > npm install @react-navigation/bottom-tabs
 > npm install @react-navigation/elements
 > npx expo install @expo/vector-icons
+> npm i axios
+> npx expo install @react-native-async-storage/async-storage

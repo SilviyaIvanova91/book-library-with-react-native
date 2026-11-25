@@ -7,15 +7,20 @@ import {
   ScrollView,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { colors } from "../theme";
-import { BookContext } from "../context/BookContext";
+import { useCart } from "../context/cart-context/useCart";
 
 export default function BookDetailsScreen({ route, navigation }) {
-  const { books } = useContext(BookContext);
+  const { addToCart } = useCart();
   const [isFavourite, setIsFavourite] = useState(false);
 
-  const book = books.find((item) => item.id === route.params?.bookId);
+  const handleAddToCart = () => {
+    addToCart(book);
+    navigation.navigate("CartMain");
+  };
+
+  const book = route.params?.book;
   if (!book) {
     return <Text>Book not found.</Text>;
   }
@@ -60,6 +65,21 @@ export default function BookDetailsScreen({ route, navigation }) {
 
         <Text style={styles.author}>{book.author}</Text>
 
+        <View style={styles.descriptionContainer}>
+          <View style={styles.descriptionHeader}>
+            <Ionicons name="book-outline" size={19} color={colors.accent} />
+            <Text style={styles.descriptionTitle}>About this book</Text>
+          </View>
+
+          <Text style={styles.description}>
+            {book.description || "No description available for this book."}
+          </Text>
+        </View>
+
+        <View style={styles.priceContainer}>
+          <Text style={styles.price}>{Number(book.price).toFixed(2)} €</Text>
+        </View>
+
         <View style={styles.divider} />
 
         <View style={styles.detailsRow}>
@@ -77,6 +97,13 @@ export default function BookDetailsScreen({ route, navigation }) {
             <Text style={styles.detailLabel}>Pages</Text>
           </View>
         </View>
+      </View>
+
+      <View style={styles.cartContainer}>
+        <Pressable style={styles.addToCartButton} onPress={handleAddToCart}>
+          <Ionicons name="cart-outline" size={22} color="#FFFFFF" />
+          <Text style={styles.addToCartText}>Add to Cart</Text>
+        </Pressable>
       </View>
     </ScrollView>
   );
@@ -155,6 +182,62 @@ const styles = StyleSheet.create({
     marginTop: 12,
     textAlign: "center",
   },
+  priceContainer: {
+    alignSelf: "center",
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+    marginTop: 18,
+    marginBottom: 5,
+  },
+
+  priceLabel: {
+    color: colors.textMuted,
+    fontSize: 14,
+    fontWeight: "500",
+  },
+
+  price: {
+    color: "#B87550",
+    fontSize: 24,
+    fontWeight: "800",
+  },
+
+  descriptionContainer: {
+    marginTop: 25,
+    padding: 16,
+    backgroundColor: colors.background,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+
+  descriptionHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 9,
+    marginBottom: 12,
+  },
+
+  descriptionTitle: {
+    color: colors.text,
+    fontSize: 16,
+    fontWeight: "800",
+  },
+
+  description: {
+    color: colors.textMuted,
+    fontSize: 14,
+    lineHeight: 23,
+    textAlign: "left",
+  },
+
+  divider: {
+    height: 1,
+    backgroundColor: colors.border,
+    marginVertical: 22,
+  },
+
   divider: {
     height: 1,
     backgroundColor: colors.border,
@@ -183,5 +266,26 @@ const styles = StyleSheet.create({
     width: 1,
     height: 55,
     backgroundColor: colors.border,
+  },
+  cartContainer: {
+    alignItems: "center",
+    marginTop: 25,
+  },
+
+  addToCartButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#B87550",
+    paddingVertical: 16,
+    paddingHorizontal: 22,
+    borderRadius: 18,
+    gap: 10,
+  },
+
+  addToCartText: {
+    color: "#FFFFFF",
+    fontSize: 17,
+    fontWeight: "700",
   },
 });

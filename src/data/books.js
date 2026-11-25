@@ -8,6 +8,8 @@ export const books = [
     pageCount: 223,
     price: 12.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780747532699-L.jpg",
+    description:
+      "An ordinary boy discovers that he is a wizard and begins a magical adventure at Hogwarts School of Witchcraft and Wizardry. There, he makes lifelong friends and uncovers the mystery surrounding his past.",
     user_id: [],
   },
   {
@@ -19,6 +21,8 @@ export const books = [
     pageCount: 251,
     price: 13.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780747538493-L.jpg",
+    description:
+      "Harry returns to Hogwarts for another year, but mysterious attacks begin turning students to stone. With the help of his friends, he investigates the legend of the Chamber of Secrets and the dark secret hidden within the school.",
     user_id: [],
   },
   {
@@ -30,6 +34,8 @@ export const books = [
     pageCount: 310,
     price: 11.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780547928227-L.jpg",
+    description:
+      "Bilbo Baggins, a comfort-loving hobbit, is drawn into an unexpected journey with a group of dwarves. Their quest to reclaim a lost kingdom brings encounters with trolls, elves, goblins and a mysterious dragon.",
     user_id: [],
   },
   {
@@ -41,6 +47,8 @@ export const books = [
     pageCount: 1178,
     price: 24.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780618640157-L.jpg",
+    description:
+      "A young hobbit inherits a powerful ring that could destroy the world if it falls into the wrong hands. Alongside a fellowship of companions, he begins a dangerous journey to the land of Mordor to destroy it.",
     user_id: [],
   },
   {
@@ -52,6 +60,8 @@ export const books = [
     pageCount: 328,
     price: 10.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780451524935-L.jpg",
+    description:
+      "In a totalitarian society ruled by Big Brother, Winston Smith struggles to preserve his individuality and discover the truth. His quiet rebellion challenges a system built on surveillance, propaganda and absolute control.",
     user_id: [],
   },
   {
@@ -63,6 +73,8 @@ export const books = [
     pageCount: 112,
     price: 8.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780451526342-L.jpg",
+    description:
+      "Farm animals overthrow their human owner in the hope of creating a fair society. As the pigs take control, their revolution gradually becomes a new form of oppression, exposing the dangers of corruption and unchecked power.",
     user_id: [],
   },
   {
@@ -74,6 +86,8 @@ export const books = [
     pageCount: 432,
     price: 11.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780141439518-L.jpg",
+    description:
+      "Elizabeth Bennet navigates family expectations, social conventions and matters of the heart. Her first impressions of the wealthy Mr. Darcy lead to misunderstandings, personal growth and an unexpected romance.",
     user_id: [],
   },
   {
@@ -85,6 +99,8 @@ export const books = [
     pageCount: 336,
     price: 12.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780061120084-L.jpg",
+    description:
+      "Through the eyes of young Scout Finch, a small Southern town is revealed through childhood adventures and a deeply troubling trial. Her father, Atticus, teaches her about justice, compassion and standing up for what is right.",
     user_id: [],
   },
   {
@@ -96,6 +112,8 @@ export const books = [
     pageCount: 180,
     price: 9.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780743273565-L.jpg",
+    description:
+      "Narrated by Nick Carraway, this story explores the glamorous world of wealthy New York society. At its center is Jay Gatsby, a mysterious millionaire whose extravagant lifestyle hides an obsession with a lost love.",
     user_id: [],
   },
   {
@@ -107,6 +125,8 @@ export const books = [
     pageCount: 277,
     price: 11.49,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780316769488-L.jpg",
+    description:
+      "After being expelled from school, teenager Holden Caulfield wanders through New York City. In a candid and often humorous account, he struggles with loneliness, growing up and finding a place in the adult world.",
     user_id: [],
   },
   {
@@ -118,6 +138,8 @@ export const books = [
     pageCount: 96,
     price: 9.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780156012195-L.jpg",
+    description:
+      "A pilot stranded in the desert meets a young prince who has travelled from a tiny asteroid. Through stories of his journeys and friendships, the prince reveals thoughtful lessons about love, responsibility and what truly matters.",
     user_id: [],
   },
   {
@@ -129,6 +151,8 @@ export const books = [
     pageCount: 208,
     price: 12.49,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780061122415-L.jpg",
+    description:
+      "Santiago, a young shepherd, follows a recurring dream that leads him on a journey across the desert in search of treasure. Along the way, he discovers that the journey itself may hold the greatest rewards.",
     user_id: [],
   },
   {
@@ -140,6 +164,8 @@ export const books = [
     pageCount: 489,
     price: 14.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780307474278-L.jpg",
+    description:
+      "Symbologist Robert Langdon becomes involved in a murder investigation at the Louvre. Cryptic clues hidden in famous works of art lead him into a dangerous puzzle involving secret societies, ancient symbols and historical mysteries.",
     user_id: [],
   },
   {
@@ -151,6 +177,8 @@ export const books = [
     pageCount: 256,
     price: 10.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780062693662-L.jpg",
+    description:
+      "When a passenger is found murdered aboard the luxurious Orient Express, detective Hercule Poirot must investigate. With the train trapped by snow and every passenger a possible suspect, the mystery becomes increasingly complicated.",
     user_id: [],
   },
   {
@@ -162,6 +190,8 @@ export const books = [
     pageCount: 447,
     price: 15.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780307743657-L.jpg",
+    description:
+      "Jack Torrance accepts a winter caretaker job at the isolated Overlook Hotel, bringing his family with him. As strange forces awaken inside the empty building, his young son discovers a terrifying ability to sense the hotel's dark secrets.",
     user_id: [],
   },
   {
@@ -173,6 +203,8 @@ export const books = [
     pageCount: 688,
     price: 17.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780441172719-L.jpg",
+    description:
+      "On the desert planet Arrakis, young Paul Atreides faces betrayal, political conflict and a dangerous destiny. Control of the planet's valuable spice makes it the center of a struggle that could change the future of the universe.",
     user_id: [],
   },
   {
@@ -184,6 +216,8 @@ export const books = [
     pageCount: 249,
     price: 10.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9781451673319-L.jpg",
+    description:
+      "In a future where books are forbidden, fireman Guy Montag is responsible for burning them. After questioning the world around him, he begins a dangerous search for knowledge, freedom and independent thought.",
     user_id: [],
   },
   {
@@ -195,6 +229,8 @@ export const books = [
     pageCount: 311,
     price: 11.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780060850524-L.jpg",
+    description:
+      "In a technologically advanced society, people are conditioned from birth to accept their assigned roles. When an outsider encounters this seemingly perfect world, its hidden costs and restrictions become impossible to ignore.",
     user_id: [],
   },
   {
@@ -206,6 +242,8 @@ export const books = [
     pageCount: 374,
     price: 13.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780439023481-L.jpg",
+    description:
+      "In a divided nation, teenagers are forced to compete in a televised fight for survival. When Katniss Everdeen volunteers to take her sister's place, she must rely on courage and strategy to survive the brutal competition.",
     user_id: [],
   },
   {
@@ -217,6 +255,8 @@ export const books = [
     pageCount: 552,
     price: 14.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780375842207-L.jpg",
+    description:
+      "In Nazi Germany, young Liesel Meminger discovers the power of words after stealing her first book. As war transforms her world, she finds comfort in reading, friendship and the courage of those who shelter a Jewish man.",
     user_id: [],
   },
   {
@@ -228,6 +268,8 @@ export const books = [
     pageCount: 371,
     price: 12.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9781594631931-L.jpg",
+    description:
+      "Amir looks back on his childhood friendship with Hassan in Afghanistan and the betrayal that changed both their lives. Years later, he gets an opportunity to confront his past and seek redemption.",
     user_id: [],
   },
   {
@@ -239,6 +281,8 @@ export const books = [
     pageCount: 465,
     price: 15.49,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780307454546-L.jpg",
+    description:
+      "Journalist Mikael Blomkvist and brilliant hacker Lisbeth Salander investigate the decades-old disappearance of a wealthy family's young relative. Their search uncovers disturbing secrets and a dangerous web of violence.",
     user_id: [],
   },
   {
@@ -250,6 +294,8 @@ export const books = [
     pageCount: 208,
     price: 11.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780064471046-L.jpg",
+    description:
+      "Four siblings discover a magical land hidden inside an old wardrobe. In Narnia, they join the struggle against the White Witch and encounter the mighty lion Aslan, who may be the key to restoring peace.",
     user_id: [],
   },
   {
@@ -261,6 +307,8 @@ export const books = [
     pageCount: 313,
     price: 12.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780525478812-L.jpg",
+    description:
+      "Hazel and Augustus meet at a support group and form a deep connection through their shared experiences. Their relationship takes them on an emotional journey about love, hope, mortality and the meaning of life.",
     user_id: [],
   },
   {
@@ -272,6 +320,8 @@ export const books = [
     pageCount: 369,
     price: 14.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780553418026-L.jpg",
+    description:
+      "Astronaut Mark Watney is accidentally left behind on Mars and must find a way to survive with limited supplies. Using science, engineering and humor, he attempts to stay alive long enough for a rescue mission.",
     user_id: [],
   },
 ];
@@ -286,6 +336,8 @@ export const featuredBooks = [
     pageCount: 304,
     price: 12.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780525559474-L.jpg",
+    description:
+      "Between life and death lies a mysterious library containing countless books, each representing a different version of Nora Seed's life. As she explores the paths she could have taken, she discovers what makes life meaningful.",
     user_id: [],
   },
   {
@@ -297,6 +349,8 @@ export const featuredBooks = [
     pageCount: 96,
     price: 9.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780156012195-L.jpg",
+    description:
+      "A young prince travels between planets, meeting unusual characters and discovering different perspectives on life. His journey explores friendship, love, imagination and the importance of seeing beyond appearances.",
     user_id: [],
   },
   {
@@ -308,10 +362,11 @@ export const featuredBooks = [
     pageCount: 320,
     price: 14.99,
     coverUrl: "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg",
+    description:
+      "James Clear explains how small, consistent changes can lead to remarkable improvements over time. The book offers practical strategies for building good habits, breaking bad ones and creating routines that support long-term success.",
     user_id: [],
   },
 ];
-
 export const categories = [
   { id: "fiction", title: "Fiction", icon: "📖", color: "#FAD0CC" },
   { id: "fantasy", title: "Fantasy", icon: "🏰", color: "#C5E9E3" },
@@ -333,5 +388,7 @@ export const popularBook = {
   pageCount: 398,
   price: 13.99,
   coverUrl: "https://covers.openlibrary.org/b/isbn/9781250217288-L.jpg",
+  description:
+    "Linus Baker, a quiet caseworker, is sent to inspect an unusual orphanage on a remote island. There he meets six extraordinary children and their mysterious caretaker, discovering friendship, acceptance and the meaning of family.",
   user_id: [],
 };

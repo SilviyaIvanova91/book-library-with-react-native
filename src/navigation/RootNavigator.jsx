@@ -1,5 +1,8 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TabNavigator from "./TabNavigator";
+import BookDetailsScreen from "../screens/BookDetailsScreen";
+import CatalogScreen from "../screens/CatalogScreen";
+import CartScreen from "../screens/CartScreen";
 
 export default function RootNavigator() {
   const Stack = createNativeStackNavigator();
@@ -10,6 +13,21 @@ export default function RootNavigator() {
         name="Main"
         component={TabNavigator}
         options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="CatalogScreen"
+        component={CatalogScreen}
+        options={{ title: "Search Results" }}
+      />
+      <Stack.Screen
+        name="BookDetails"
+        component={BookDetailsScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="CartMain"
+        component={CartScreen}
+        options={{ title: "Cart" }}
       />
     </Stack.Navigator>
   );

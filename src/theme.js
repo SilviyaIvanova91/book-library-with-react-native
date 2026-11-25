@@ -8,7 +8,7 @@ export const colors = {
   favorite: "#E5484D",
 };
 
-export const COLORS = {
+export const homeColors = {
   primary: "#3CA495",
   primaryDark: "#247F75",
   coral: "#FF8580",
