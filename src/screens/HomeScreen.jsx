@@ -7,17 +7,23 @@ import {
   Pressable,
   FlatList,
   Image,
+  ActivityIndicator,
 } from "react-native";
 import { homeColors } from "../theme";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-import { useState } from "react";
-import { featuredBooks } from "../data/books";
+import { useState, useContext } from "react";
+import { BookContext } from "../context/BookContext";
 
 export default function HomeScreen({}) {
   const navigation = useNavigation();
   const [searchQuery, setSearchQuery] = useState("");
+  const { featuredBooks, isLoading } = useContext(BookContext);
+
+  if (isLoading) {
+    return <ActivityIndicator size="large" />;
+  }
 
   const searchBooksHandler = () => {
     if (!searchQuery.trim()) return;
@@ -84,11 +90,11 @@ export default function HomeScreen({}) {
 
         <FlatList
           data={featuredBooks}
-          keyExtractor={(item) => item.id}
-          renderItem={renderFeaturedBook}
           horizontal
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={styles.featuredList}
+          keyExtractor={(item) => String(item.id)}
+          renderItem={renderFeaturedBook}
         />
       </View>
 
